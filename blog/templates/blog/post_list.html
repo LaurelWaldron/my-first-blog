@@ -7,10 +7,15 @@
             <h3>A Weekend in the West</h3>
             <p> Here's some words about when I went to Bristol...</p>
       </div>
-
-
-      <div>
+{% for post in posts %}
+<div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+      <!-- <div>
       <h3>New York for Newbies</h3>
       <p>Some words about when I went to New York...</p>
-    </div>
+    </div> -->
 </html>
